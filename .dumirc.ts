@@ -17,6 +17,7 @@ export default defineConfig({
   hash: true,
   favicons: [logo],
   publicPath,
+  runtimePublicPath: {},
   alias: {
     images: '/docs/images',
   },
