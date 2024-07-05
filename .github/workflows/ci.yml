@@ -1,6 +1,5 @@
 name: GitHub Actions Build and Deploy
-permissions:
-  contents: write
+
 on:
   push:
     branches:
@@ -12,7 +11,10 @@ on:
       - tsconfig.json
       - package.json
       - .github/workflows/*
-
+      
+permissions:
+  contents: write
+      
 jobs:
   build-and-deploy:
     concurrency: ci-${{ github.ref }} 
