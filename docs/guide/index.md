@@ -21,28 +21,4 @@ $ node -v
 v18.13.0
 ```
 
-![](images/node-version.png)
 
-## 脚手架
-
-```bash
-# 进入需要创建项目的目录
-# 脚手架创建项目，选择你需要的模板
-$ npx -p @xmly/create-project create-project
-
-# 输入项目名称
-$ ? 请输入项目英文名称（小写字母或数字、中划线连接）： vite-pc
-
-$ ? 请选择一个模式： (Use arrow keys)
-$ ❯ pc       # pc端模版
-$   mobile   # 移动端模版
-
-$ ? 是否使用zustand（全局状态管理） (Use arrow keys)
-$ ❯ y        # 使用
-$   n        # 不使用
-
-# 创建完成后安装依赖
-$ yarn
-```
-
-![](images/create.png)
