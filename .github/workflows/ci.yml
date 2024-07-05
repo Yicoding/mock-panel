@@ -1,5 +1,6 @@
 name: GitHub Actions Build and Deploy
-
+permissions:
+  contents: write
 on:
   push:
     branches:
@@ -36,5 +37,5 @@ jobs:
           # TARGET_FOLDER: ${{github.ref}}
           # token: ${{ secrets.WEBSITE }}
           # branch: gh-pages
-          folder: dist
+          folder: 'dist'
           # target-folder: ${{github.ref}}
