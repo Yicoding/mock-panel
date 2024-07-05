@@ -1,0 +1,21 @@
+{
+  "scripts": {
+    "build": "dumi build",
+    "dev": "dumi dev",
+    "pub": "git add . && changeset && changeset version && changeset publish && git push --follow-tags",
+    "commit": "git-cz",
+    "start": "npm run dev"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.26.1",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "dumi": "^2.1.22",
+    "typescript": "^5.2.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  }
+}
