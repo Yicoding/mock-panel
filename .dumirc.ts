@@ -4,7 +4,7 @@ const logo =
   'https://imagev2.xmcdn.com/storages/f8d2-audiofreehighqps/81/43/GMCoOSYIO18uAAAvaAIdYbXD.png';
 
 
-const publicPath = process.env.NODE_ENV === 'production' ? `/mock-panel/refs/heads/master/` : '/';
+const publicPath = process.env.NODE_ENV === 'production' ? `./` : '/';
 
 export default defineConfig({
   themeConfig: {
@@ -16,7 +16,6 @@ export default defineConfig({
   },
   hash: true,
   favicons: [logo],
-  base: publicPath,
   publicPath,
   runtimePublicPath: {},
   alias: {
