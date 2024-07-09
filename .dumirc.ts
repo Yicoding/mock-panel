@@ -11,6 +11,9 @@ export default defineConfig({
     name: 'mock-panel',
     logo,
   },
+  scripts: [
+    `window.publicPath = '${publicPath}';`,
+  ],
   history: {
     type: 'hash',
   },
