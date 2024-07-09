@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "declaration": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "jsx": "react",
+    "baseUrl": "./",
+  },
+  "include": ["src"],
+  "exclude": ["**/dist/**", "**/node_modules/**"]
+}

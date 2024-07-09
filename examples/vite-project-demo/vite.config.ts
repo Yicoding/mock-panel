@@ -7,6 +7,7 @@ import { minify } from 'terser'; // 引入手动安装的Terser
 import { visualizer } from 'rollup-plugin-visualizer';
 import { viteMockServe } from 'vite-plugin-mock';
 import { manualChunksPlugin } from 'vite-plugin-webpackchunkname';
+import { viteMockPanel } from '../../packages/vite-plugin-mock-panel/lib'
 
 // 引入 path 包注意两点:
 // 1. 为避免类型报错，你需要通过 `pnpm i @types/node -D` 安装类型
@@ -92,29 +93,30 @@ export default defineConfig(({ mode, command }: ConfigEnv) => {
       // 语法降级与Polyfill
       legacy({
         // 设置目标浏览器，browserslist 配置语法
-        
-  targets: [
-    'chrome >= 64',
-    'edge >= 79',
-    'safari >= 11.1',
-    'firefox >= 67'
-  ],
-    
+
+        targets: [
+          'chrome >= 64',
+          'edge >= 79',
+          'safari >= 11.1',
+          'firefox >= 67'
+        ],
+
       }),
-// mock服务
-VITE_BUILD_ENV === 'mock' &&
-  viteMockServe({
-    // default
-    mockPath: 'mock'
-  }),
-  // 构建产物分析
-  VITE_BUILD_ANALYZER &&
-  visualizer({
-    // 打包完成后自动打开浏览器，显示产物体积报告
-    open: true,
-    gzipSize: true,
-    brotliSize: true
-  })
+      // mock服务
+      VITE_BUILD_ENV === 'mock' &&
+      viteMockServe({
+        // default
+        mockPath: 'mock'
+      }),
+      // 构建产物分析
+      VITE_BUILD_ANALYZER &&
+      visualizer({
+        // 打包完成后自动打开浏览器，显示产物体积报告
+        open: true,
+        gzipSize: true,
+        brotliSize: true
+      }),
+      viteMockPanel()
     ]
   };
 });
