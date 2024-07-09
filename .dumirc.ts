@@ -12,7 +12,7 @@ export default defineConfig({
     logo,
   },
   headScripts: [
-    { content: `window.publicPath = '';`, charset: 'utf-8' },
+    { content: `window.publicPath = '/mock-panel/refs/heads/master/';`, charset: 'utf-8' },
   ],
   history: {
     type: 'hash',
