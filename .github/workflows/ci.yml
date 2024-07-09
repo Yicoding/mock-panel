@@ -1,43 +1,43 @@
-name: GitHub Actions Build and Deploy
+# name: GitHub Actions Build and Deploy
 
-on:
-  push:
-    branches:
-      - master
-      - v*
-    paths:
-      - docs/**
-      - .dumirc.ts
-      - tsconfig.json
-      - package.json
-      - .github/workflows/*
+# on:
+#   push:
+#     branches:
+#       - master
+#       - v*
+#     paths:
+#       - docs/**
+#       - .dumirc.ts
+#       - tsconfig.json
+#       - package.json
+#       - .github/workflows/*
       
-permissions:
-  contents: write
+# permissions:
+#   contents: write
       
-jobs:
-  build-and-deploy:
-    concurrency: ci-${{ github.ref }} 
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Use Node.js 18.x
-        uses: actions/setup-node@v2
-        with:
-         node-version: 18
-      - name: Install
-        run: yarn install
-      - name: Build docs
-        run: yarn build
-      - name: Deploy docs
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          # GITHUB_TOKEN: ${{ secrets.ECO_WEB_SITE_TOKEN }}
-          # BRANCH: gh-pages
-          # FOLDER: site
-          # TARGET_FOLDER: ${{github.ref}}
-          # token: ${{ secrets.WEBSITE }}
-          # branch: gh-pages
-          folder: 'dist'
-          target-folder: ${{github.ref}}
+# jobs:
+#   build-and-deploy:
+#     concurrency: ci-${{ github.ref }} 
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout
+#         uses: actions/checkout@v4
+#       - name: Use Node.js 18.x
+#         uses: actions/setup-node@v2
+#         with:
+#          node-version: 18
+#       - name: Install
+#         run: yarn install
+#       - name: Build docs
+#         run: yarn build
+#       - name: Deploy docs
+#         uses: JamesIves/github-pages-deploy-action@v4
+#         with:
+#           # GITHUB_TOKEN: ${{ secrets.ECO_WEB_SITE_TOKEN }}
+#           # BRANCH: gh-pages
+#           # FOLDER: site
+#           # TARGET_FOLDER: ${{github.ref}}
+#           # token: ${{ secrets.WEBSITE }}
+#           # branch: gh-pages
+#           folder: 'dist'
+#           target-folder: ${{github.ref}}

@@ -10,10 +10,12 @@
     "build": "dumi build",
     "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
     "pub": "lerna publish",
-    "commit": "cz"
+    "commit": "cz",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {},
   "devDependencies": {
+    "gh-pages": "^6.1.1",
     "@commitlint/cli": "^17.6.1",
     "@commitlint/config-conventional": "^17.6.1",
     "commitizen": "^4.3.0",
