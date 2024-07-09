@@ -40,4 +40,4 @@ jobs:
           # token: ${{ secrets.WEBSITE }}
           # branch: gh-pages
           folder: 'dist'
-          # target-folder: ${{github.ref}}
+          target-folder: ${{github.ref}}
