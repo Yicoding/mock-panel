@@ -16,11 +16,9 @@ export default defineConfig({
   },
   hash: true,
   favicons: [logo],
+  base: publicPath,
   publicPath,
   runtimePublicPath: {},
-  chainWebpack(config: any) {
-    config.output.publicPath('./');
-  },
   alias: {
     images: '/docs/images',
   },

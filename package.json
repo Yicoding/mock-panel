@@ -18,7 +18,7 @@
     "@commitlint/config-conventional": "^17.6.1",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
-    "dumi": "^2.2.0",
+    "dumi": "^2.4.5",
     "lerna": "^6.6.1",
     "lint-staged": "^13.0.3",
     "prettier": "^2.8.7",
