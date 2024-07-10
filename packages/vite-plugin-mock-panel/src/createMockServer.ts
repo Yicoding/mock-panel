@@ -20,6 +20,8 @@ export async function createMockServer(
   opt: ViteMockOptions = { mockPath },
   config: ResolvedConfig,
 ) {
+  const isDev = config.command === 'serve';
+  console.log('isDev', isDev)
   opt = {
     mockPath,
     ...opt,

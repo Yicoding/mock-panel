@@ -7,7 +7,7 @@ import { minify } from 'terser'; // 引入手动安装的Terser
 import { visualizer } from 'rollup-plugin-visualizer';
 import { viteMockServe } from 'vite-plugin-mock';
 import { manualChunksPlugin } from 'vite-plugin-webpackchunkname';
-import { viteMockPanel } from '../../packages/vite-plugin-mock-panel/lib'
+import { viteMockPanel } from '../../packages/vite-plugin-mock-panel'
 
 // 引入 path 包注意两点:
 // 1. 为避免类型报错，你需要通过 `pnpm i @types/node -D` 安装类型
